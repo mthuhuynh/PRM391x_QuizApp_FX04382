@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">PRM391x_QuizApp_FX04382</string>
+    <string name="hint">Name</string>
+    <string name="hello">Hello, %1$s!</string>
+    <string name="login">Log In</string>
+    <string name="timer">seconds remaining</string>
+    <string name="submit">Submit</string>
+
+    <string name="q1">1. What is Deoxyribonucleic acid commonly referred to as?</string>
+    <string name="q1_option1">RNA</string>
+    <string name="q1_option2">CIA</string>
+    <string name="q1_option3">DNA</string>
+
+    <string name="q2">2. What process involves treating rubber with sulfur to harden it?</string>
+
+    <string name="q3">3. Name two different organelles of a eukaryotic cell.</string>
+    <string name="q3_option1">Ribosome</string>
+    <string name="q3_option2">Plasmids</string>
+    <string name="q3_option3">Golgi apparatus</string>
+    <string name="q3_option4">Diploid</string>
+
+    <string name="q4">4. This word describes the force that pulls objects to the middle of the earth?</string>
+
+    <string name="q5">5 What type of trees yield the resin used to produce turpentine?</string>
+    <string name="q5_option1">Palm trees</string>
+    <string name="q5_option2">Pine trees</string>
+    <string name="q5_option3">Oak trees</string>
+
+    <string name="q6">6. Cumulus and Cirrus are types of what?</string>
+
+    <string name="q7">7. Which two planets have one or more moons?</string>
+    <string name="q7_option1">Ceres</string>
+    <string name="q7_option2">Mercury</string>
+    <string name="q7_option3">Earth</string>
+    <string name="q7_option4">Pluto</string>
+
+    <string name="q8">8. Where in the human body would you find the scaphoid bone?</string>
+
+    <string name="q9">9. Which grow upwards Stalactites or Stalagmites?</string>
+    <string name="q9_option1">Stalactites</string>
+    <string name="q9_option2">Stalagmites</string>
+
+    <string name="q10">10. What process involves heating an ore to obtain a metal?</string>
+</resources>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:orientation="horizontal"
+    android:gravity="start"
+    tools:context=".MainActivity">
+
+    <!-- Name Header aligned to top -->
+    <RelativeLayout
+        android:id="@+id/activity_main_header"
+        style="@style/OptionFont"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/activity_main_tv_name"
+            style="@style/MainFont"
+            android:text="@string/hello"
+            android:textAllCaps="true"/>
+
+    </RelativeLayout>
+
+    <!-- Submit Footer aligned to bottom -->
+    <RelativeLayout
+        android:id="@+id/activity_main_footer"
+        style="@style/OptionFont"
+        android:layout_alignParentBottom="true"        >
+
+        <Button
+            android:id="@+id/activity_main_btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit" />
+
+        <TextView
+            android:id="@+id/activity_main_tv_timer"
+            style="@style/MainFont"
+            android:text="@string/timer"
+            android:gravity="end" />
+
+    </RelativeLayout>
+
+    <!-- Scrollable Questionnaire below header and above footer -->
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        style="@style/OptionFont"
+        android:layout_above="@id/activity_main_footer"
+        android:layout_below="@id/activity_main_header" >
+
+        <LinearLayout
+            style="@style/OptionFont"
+            android:orientation="vertical" >
+
+            <!--Question 1-->
+            <TextView
+                android:id="@+id/activity_main_tv_q1_ques"
+                style="@style/MainFont"
+                android:text="@string/q1" />
+
+            <RadioGroup
+                android:id="@+id/activity_main_rg_q1"
+                style="@style/OptionFont">
+
+                <RadioButton
+                    android:id="@+id/activity_main_rb_q1_op1"
+                    style="@style/OptionFont"
+                    android:text="@string/q1_option1" />
+                <RadioButton
+                    android:id="@+id/activity_main_rb_q1_op2"
+                    style="@style/OptionFont"
+                    android:text="@string/q1_option2"/>
+                <RadioButton
+                    android:id="@+id/activity_main_rb_q1_op3"
+                    style="@style/OptionFont"
+                    android:text="@string/q1_option3"/>
+            </RadioGroup>
+
+            <!--Question 2 -->
+            <TextView
+                android:id="@+id/activity_main_tv_q2_ques"
+                style="@style/MainFont"
+                android:text="@string/q2" />
+
+            <EditText
+                android:id="@+id/activity_main_et_q2_ans"
+                style="@style/OptionFont"
+                android:focusable="auto"/>
+
+            <!--Question 3 -->
+            <TextView
+                android:id="@+id/activity_main_tv_q3_ques"
+                style="@style/MainFont"
+                android:text="@string/q3" />
+
+            <CheckBox
+                android:id="@+id/activity_main_cb_q3_op1"
+                style="@style/OptionFont"
+                android:text="@string/q3_option1" />
+            <CheckBox
+                android:id="@+id/activity_main_cb_q3_op2"
+                style="@style/OptionFont"
+                android:text="@string/q3_option2"/>
+            <CheckBox
+                android:id="@+id/activity_main_cb_q3_op3"
+                style="@style/OptionFont"
+                android:text="@string/q3_option3"/>
+            <CheckBox
+                android:id="@+id/activity_main_cb_q3_op4"
+                style="@style/OptionFont"
+                android:text="@string/q3_option4"/>
+
+            <!-- Question 4-->
+            <TextView
+                android:id="@+id/activity_main_tv_q4_ques"
+                style="@style/MainFont"
+                android:text="@string/q4" />
+
+            <EditText
+                android:id="@+id/activity_main_et_q4_ans"
+                style="@style/OptionFont" />
+
+            <!--Question 5-->
+            <TextView
+                android:id="@+id/activity_main_tv_q5_ques"
+                style="@style/MainFont"
+                android:text="@string/q5" />
+
+            <RadioGroup
+                style="@style/OptionFont"
+                android:id="@+id/activity_main_rg_q5">
+
+                <RadioButton
+                    android:id="@+id/activity_main_rb_q5_op1"
+                    style="@style/OptionFont"
+                    android:text="@string/q5_option1" />
+                <RadioButton
+                    android:id="@+id/activity_main_rb_q5_op2"
+                    style="@style/OptionFont"
+                    android:text="@string/q5_option2"/>
+                <RadioButton
+                    android:id="@+id/activity_main_rb_q5_op3"
+                    style="@style/OptionFont"
+                    android:text="@string/q5_option3"/>
+            </RadioGroup>
+
+            <!-- Question 6-->
+            <TextView
+                android:id="@+id/activity_main_tv_q6_ques"
+                style="@style/MainFont"
+                android:text="@string/q6" />
+
+            <EditText
+                android:id="@+id/activity_main_et_q6_ans"
+                style="@style/OptionFont" />
+
+            <!--Question 7-->
+            <TextView
+                android:id="@+id/activity_main_tv_q7_ques"
+                style="@style/MainFont"
+                android:text="@string/q7" />
+
+            <CheckBox
+                android:id="@+id/activity_main_cb_q7_op1"
+                style="@style/OptionFont"
+                android:text="@string/q7_option1" />
+            <CheckBox
+                android:id="@+id/activity_main_cb_q7_op2"
+                style="@style/OptionFont"
+                android:text="@string/q7_option2"/>
+            <CheckBox
+                android:id="@+id/activity_main_cb_q7_op3"
+                style="@style/OptionFont"
+                android:text="@string/q7_option3"/>
+            <CheckBox
+                android:id="@+id/activity_main_cb_q7_op4"
+                style="@style/OptionFont"
+                android:text="@string/q7_option4"/>
+
+            <!--Question 8-->
+            <TextView
+                android:id="@+id/activity_main_tv_q8_ques"
+                style="@style/MainFont"
+                android:text="@string/q8" />
+
+            <EditText
+                android:id="@+id/activity_main_et_q8_ans"
+                style="@style/OptionFont" />
+
+            <!--Question 9-->
+            <TextView
+                android:id="@+id/activity_main_tv_q9_ques"
+                style="@style/MainFont"
+                android:text="@string/q9" />
+
+            <RadioGroup
+                style="@style/OptionFont"
+                android:id="@+id/activity_main_rg_q9">
+
+                <RadioButton
+                    android:id="@+id/activity_main_rb_q9_op1"
+                    style="@style/OptionFont"
+                    android:text="@string/q9_option1"/>
+                <RadioButton
+                    android:id="@+id/activity_main_rb_q9_op2"
+                    style="@style/OptionFont"
+                    android:text="@string/q9_option2"/>
+            </RadioGroup>
+
+            <!--Question 10-->
+            <TextView
+                android:id="@+id/activity_main_tv_q10_ques"
+                style="@style/MainFont"
+                android:text="@string/q10" />
+
+            <EditText
+                android:id="@+id/activity_main_et_q10_ans"
+                style="@style/OptionFont" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+
