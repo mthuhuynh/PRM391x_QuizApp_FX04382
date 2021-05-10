@@ -8,8 +8,8 @@ import android.widget.Button;
 
 public class LogInActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "funix.prm.quiz.NAME";
-    private TextInputEditText activity_login_et_name;
-    private Button activity_login_btn_login;
+    private TextInputEditText loginTextInputEditText;
+    private Button loginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,16 +17,16 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        activity_login_et_name = findViewById(R.id.activity_login_et_name);
-        activity_login_btn_login = findViewById(R.id.activity_login_btn_login);
-        activity_login_btn_login.setOnClickListener(view -> switchActivitiesWithName());
+        loginTextInputEditText = findViewById(R.id.activity_login_et_name);
+        loginButton = findViewById(R.id.activity_login_btn_login);
+        loginButton.setOnClickListener(view -> switchActivitiesWithName());
     }
 
     /**Switch to MainActivity with login Name
      */
     private void switchActivitiesWithName() {
         Intent switchActivityIntent = new Intent(this, MainActivity.class);
-        String name = activity_login_et_name.getText().toString();
+        String name = loginTextInputEditText.getText().toString();
         switchActivityIntent.putExtra(EXTRA_MESSAGE, name);
         startActivity(switchActivityIntent);
     }
