@@ -3,6 +3,7 @@ package funix.prm.quiz;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 timerTextview.setText("seconds remaining: " + millisUntilFinished / 1000);
             }
+
             public void onFinish() {
                 timerTextview.setText("done!");
                 report();
@@ -60,8 +62,14 @@ public class MainActivity extends AppCompatActivity {
         }.start();
 
         submitButton = findViewById(R.id.activity_main_btn_submit);
-        submitButton.setOnClickListener(view -> report());
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                report();
+            }
+        });
     }
+
 
     /**
      * Report result on Toast after evaluate all answers
@@ -82,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
         int countCorrect = 0;
 
         //Question 1
-        RadioButton q1checkedbutton = findViewById(q1RadioGroup.getCheckedRadioButtonId());
-        if (q1checkedbutton != null && q1checkedbutton.getText().equals("DNA")) {
+        RadioButton q1CheckedButton = findViewById(q1RadioGroup.getCheckedRadioButtonId());
+        if (q1CheckedButton != null && q1CheckedButton.getText().equals("DNA")) {
             countCorrect++;
         }
 
@@ -106,8 +114,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Question 5
-        RadioButton q5checkedbutton = findViewById(q5RadioGroup.getCheckedRadioButtonId());
-        if (q5checkedbutton != null && q5checkedbutton.getText().equals("Pine trees")) {
+        RadioButton q5CheckedButton = findViewById(q5RadioGroup.getCheckedRadioButtonId());
+        if (q5CheckedButton != null && q5CheckedButton.getText().equals("Pine trees")) {
             countCorrect++;
         }
 
@@ -128,8 +136,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Question 9
-        RadioButton q9checkedbutton = findViewById(q9RadioGroup.getCheckedRadioButtonId());
-        if (q9checkedbutton != null && q9checkedbutton.getText().equals("Stalagmites")) {
+        RadioButton q9cCheckedButton = findViewById(q9RadioGroup.getCheckedRadioButtonId());
+        if (q9cCheckedButton != null && q9cCheckedButton.getText().equals("Stalagmites")) {
             countCorrect++;
         }
 
